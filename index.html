@@ -1,0 +1,49 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>
+        My family book
+    </title>
+</head>
+<body>
+    <h1>My family book</h1>
+    <button type="button" onclick="next()">Next</button>
+    <img id="fam_img" src="happy-family-cartoon-png-favpng-pj5kBP4VMruatQzS3sdFXNYU2.jpg">
+    <p id= "fam_p">My family</p>
+    <script>
+        var image=[
+        "happy-family-cartoon-png-favpng-pj5kBP4VMruatQzS3sdFXNYU2.jpg" ,
+        "i.jpg" ,
+        "PM.jpeg" ,
+        "HD.jpeg" ,
+        "GD.jpeg" ,
+        "Rohini Di.jpeg" ,
+        "JL.jpeg"
+        ];
+        var namess=[
+            "My family" ,
+            "Me" ,
+            "My parents" ,
+            "My sister" ,
+            "My sister" ,
+            "My sister" ,
+            "My pets"
+        ];
+        var i=0;
+        function next(){
+            i++;
+            var no_of_text_and_img= 6;
+            if (i> no_of_text_and_img){
+                i=0;
+            }
+
+            var all_img= image[i];
+            var all_names= namess[i];
+            
+            document.getElementById("fam_img").src= all_img;
+            document.getElementById("fam_p").innerHTML= all_names;
+        }
+
+    </script>
+</body>
+</html>
